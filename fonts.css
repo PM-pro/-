@@ -1,0 +1,105 @@
+/* 字体定义文件 */
+
+/* 思源宋体简体 */
+@font-face {
+    font-family: 'Source Han Serif CN';
+    src: url('SourceHanSerifCN-Regular.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+/* 思源宋体繁体 */
+@font-face {
+    font-family: 'Source Han Serif TC';
+    src: url('SourceHanSerifTC-Regular.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+/* 思源黑体 */
+@font-face {
+    font-family: 'Source Han Sans CN';
+    src: url('SourceHanSansCN-Regular.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+/* 京华老宋体v2 */
+@font-face {
+    font-family: 'JingHua SongTi';
+    src: url('JingHuaSongTi-v2.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+/* 凌东齐伋复刻combo */
+@font-face {
+    font-family: 'LingDong QiWei';
+    src: url('LingDongQiWei-Combo.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+/* 源云明体繁体 */
+@font-face {
+    font-family: 'GenYuanMing TC';
+    src: url('GenYuanMingTC-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+/* 汉仪文润宋韵U */
+@font-face {
+    font-family: 'HYWenRunSongYun';
+    src: url('HYWenRunSongYunU.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+/* 文鼎楷体 */
+@font-face {
+    font-family: 'DFKai-SB';
+    src: url('DFKai-SB.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+/* 文悦古体仿宋F */
+@font-face {
+    font-family: 'WenYue GuTi FangSong';
+    src: url('WenYueGuTiFangSongF.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+/* 霞鹜文楷 */
+@font-face {
+    font-family: 'LXGW WenKai';
+    src: url('LXGWWenKai-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+/* 方正书宋 */
+@font-face {
+    font-family: 'FZ ShuSong';
+    src: url('FZShuSong-Z01.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+/* 方正楷体 */
+@font-face {
+    font-family: 'FZ KaiTi';
+    src: url('FZKaiTi.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+/* 方正仿宋 */
+@font-face {
+    font-family: 'FZ FangSong';
+    src: url('FZFangSong-Z02.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}

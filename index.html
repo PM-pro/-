@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>古籍竖版阅读器</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="fonts/fonts.css">
+    <!-- 删除导出功能所需的库 -->
+</head>
+<body>
+    <div class="container">
+        <!-- 移除折叠按钮 -->
+        
+        <div class="sidebar" id="sidebar">
+            <h1>古籍竖版阅读器</h1>
+            <div class="controls">
+                <div class="control-group">
+                    <label for="font-size">字体大小</label>
+                    <input type="range" id="font-size" min="14" max="24" value="18">
+                    <span id="font-size-value">18px</span>
+                </div>
+                <div class="control-group">
+                    <label for="line-height">行间距</label>
+                    <input type="range" id="line-height" min="1.5" max="3" step="0.1" value="2">
+                    <span id="line-height-value">2</span>
+                </div>
+                <div class="control-group">
+                    <label for="letter-spacing">字间距</label>
+                    <input type="range" id="letter-spacing" min="0" max="10" value="2">
+                    <span id="letter-spacing-value">2px</span>
+                </div>
+                <div class="control-group">
+                    <label for="theme">主题</label>
+                    <select id="theme">
+                        <option value="light">浅色</option>
+                        <option value="sepia">护眼</option>
+                        <option value="ancient">古籍</option>
+                        <option value="dark">暗色</option>
+                    </select>
+                </div>
+                <div class="control-group">
+                    <label for="layout-style">排版样式</label>
+                    <select id="layout-style">
+                        <option value="default">默认</option>
+                        <option value="classical">古典</option>
+                    </select>
+                </div>
+                <div class="control-group">
+                    <label for="font-family">字体</label>
+                    <select id="font-family">
+                        <optgroup label="系统字体">
+                            <option value="SimSun">宋体</option>
+                            <option value="FangSong">仿宋</option>
+                            <option value="KaiTi">楷体</option>
+                            <option value="STSong">华文宋体</option>
+                        </optgroup>
+                        <optgroup label="思源字体">
+                            <option value="'Source Han Serif CN', serif">思源宋体简体</option>
+                            <option value="'Source Han Serif TC', serif">思源宋体繁体</option>
+                            <option value="'Source Han Sans CN', sans-serif">思源黑体</option>
+                        </optgroup>
+                        <optgroup label="宋体系列">
+                            <option value="'JingHua SongTi', serif">京华老宋体v2</option>
+                            <option value="'LingDong QiWei', serif">凌东齐伋复刻combo</option>
+                            <option value="'GenYuanMing TC', serif">源云明体繁体</option>
+                            <option value="'HYWenRunSongYun', serif">汉仪文润宋韵U</option>
+                        </optgroup>
+                        <optgroup label="楷体/仿宋系列">
+                            <option value="'DFKai-SB', serif">文鼎楷体</option>
+                            <option value="'WenYue GuTi FangSong', serif">文悦古体仿宋F</option>
+                            <option value="'LXGW WenKai', serif">霞鹜文楷</option>
+                            <option value="'FZ KaiTi', serif">方正楷体</option>
+                            <option value="'FZ FangSong', serif">方正仿宋</option>
+                        </optgroup>
+                        <optgroup label="其他字体">
+                            <option value="'FZ ShuSong', serif">方正书宋</option>
+                        </optgroup>
+                    </select>
+                </div>
+                <div class="control-group">
+                    <label for="input-text">输入文本</label>
+                    <textarea id="input-text" placeholder="在此输入或粘贴文本..." rows="5"></textarea>
+                    <div class="button-group">
+                        <button id="convert-btn">转换为竖排</button>
+                        <button id="clear-btn">清空内容</button>
+                    </div>
+                </div>
+                <!-- 删除导出选项控制组 -->
+                
+                <!-- 背景图片控制组移到这里 -->
+                <div class="control-group">
+                    <label for="background-image">背景图片</label>
+                    <input type="file" id="background-image" accept="image/*">
+                    <div class="button-group">
+                        <button id="remove-bg-btn">移除背景</button>
+                        <button id="adjust-opacity-btn">调整透明度</button>
+                    </div>
+                    <input type="range" id="bg-opacity" min="0.1" max="1" step="0.1" value="0.2" style="display: none;">
+                    <span id="bg-opacity-value" style="display: none;">0.2</span>
+                </div>
+            </div>
+            <div class="instructions">
+                <h3>使用说明</h3>
+                <p>1. 在输入框中输入或粘贴您想要阅读的文本</p>
+                <p>2. 点击"转换为竖排"按钮将文本转换为竖排格式</p>
+                <p>3. 调整字体大小、行间距等设置以获得最佳阅读体验</p>
+                <p>4. 可上传背景图片并调整透明度</p>
+            </div>
+        </div>
+        <!-- 确保这部分结构正确 -->
+        <!-- 在content-wrapper中添加调试信息 -->
+        <div class="content-wrapper">
+            <div id="bg-overlay"></div>
+            <div id="vertical-content" class="vertical-content"></div>
+            <div id="debug-info" style="position: absolute; bottom: 5px; right: 5px; font-size: 10px; color: #999; display: none;"></div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
